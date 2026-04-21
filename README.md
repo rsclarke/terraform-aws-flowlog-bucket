@@ -90,7 +90,7 @@ When `manage_lifecycle = true` (default), the module creates a lifecycle configu
 | Rule | Scope | Behaviour |
 |------|-------|-----------|
 | `flow-logs-retention` | `AWSLogs/` prefix | 90d → Glacier, 365d → Deep Archive, 2555d (7 years) expiry |
-| `cleanup` | Entire bucket | Noncurrent version expiry at 30d, abort incomplete multipart uploads at 7d |
+| `cleanup` | Entire bucket | Expired delete marker cleanup, noncurrent version expiry at 30d, abort incomplete multipart uploads at 7d |
 
 The 7-year retention covers most compliance frameworks (NIST, PCI-DSS, SOC 2). The lifecycle skips STANDARD_IA because VPC Flow Logs produce many small files where the 128 KB minimum object charge makes IA more expensive than Standard.
 
