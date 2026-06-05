@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      - uses: rsclarke/setup-tenv@bb54a9ad4d9d508ad2ebc7f8774d0dd005fd4c9f # v2.0.0
+      - uses: rsclarke/setup-tenv@3d18295597c070746e3af675a40415f65359a411 # v2.1.0
         with:
           tool: terraform
           tool-version: 1.14.7
